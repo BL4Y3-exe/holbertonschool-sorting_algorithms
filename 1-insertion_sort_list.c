@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * insertion_sort_list - sorts a doubly linked list using the Insertion sort algorithm
+ * insertion_sort_list - sorts a list using the Insertion sort algorithm
  * @list: pointer to the head of the list
  */
 void insertion_sort_list(listint_t **list)
@@ -10,7 +10,7 @@ void insertion_sort_list(listint_t **list)
 
 	current = (*list)->next;
 
-	while(current)
+	while (current)
 	{
 		next = current->next;
 		insert = current->prev;
