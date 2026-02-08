@@ -21,7 +21,7 @@ static void swap(int *a, int *b, int *array, size_t size)
 }
 
 /**
- * lomuto_partitiron - lomuto patition scheme
+ * lomuto_partition - lomuto patition scheme
  * @array: array to sort
  * @low: lower than pivot
  * @high: higher than pivot
