@@ -26,7 +26,7 @@ static void swap(int *a, int *b, int *array, size_t size)
  * @low: lower than pivot
  * @high: higher than pivot
  * @size: size of an array
- * 
+ *
  * Return: pivot's position
  */
 static int lomuto_partition(int *array, int low, int high, size_t size)
