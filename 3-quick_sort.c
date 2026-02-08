@@ -5,15 +5,15 @@
  */
 static void swap(int *a, int *b, int *array, size_t size)
 {
-    int tmp;
+	int tmp;
 
-    if (a == b || *a == *b)
-        return;
-    
-    tmp = *a;
-    *a = *b;
-    *b = tmp;
-    print_array(array, size);
+	if (a == b || *a == *b)
+		return;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+	print_array(array, size);
 }
 
 /**
@@ -21,21 +21,21 @@ static void swap(int *a, int *b, int *array, size_t size)
  */
 static int lomuto_partition(int *array, int low, int high, size_t size)
 {
-    int pivot = array[high];
-    int i = low;
-    int j;
+	int pivot = array[high];
+	int i = low;
+	int j;
 
-    for (j = low; j < high; j++)
-    {
-        if (array[j] < pivot)
-        {
-            swap(&array[i], &array[j], array, size);
-            i++;
-        }
-    }
+	for (j = low; j < high; j++)
+	{
+		if (array[j] < pivot)
+		{
+			swap(&array[i], &array[j], array, size);
+			i++;
+		}
+	}
 
-    swap(&array[i], &array[high], array, size);
-    return (i);
+	swap(&array[i], &array[high], array, size);
+	return (i);
 }
 
 /**
@@ -43,14 +43,14 @@ static int lomuto_partition(int *array, int low, int high, size_t size)
  */
 static void quick_sort_recursion(int *array, int low, int high, size_t size)
 {
-    int p;
+	int p;
 
-    if (low < high)
-    {
-        p = lomuto_partition(array, low, high, size);
-        quick_sort_recursion(array, low, p - 1, size);
-        quick_sort_recursion(array, p + 1, high, size);
-    }
+	if (low < high)
+	{
+		p = lomuto_partition(array, low, high, size);
+		quick_sort_recursion(array, low, p - 1, size);
+		quick_sort_recursion(array, p + 1, high, size);
+	}
 }
 
 /**
@@ -60,8 +60,8 @@ static void quick_sort_recursion(int *array, int low, int high, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-    if (array == NULL || size < 2)
-        return;
+	if (array == NULL || size < 2)
+		return;
 
-    quick_sort_recursion(array, 0, size - 1, size);
+	quick_sort_recursion(array, 0, size - 1, size);
 }
