@@ -2,6 +2,10 @@
 
 /**
  * swap - swaping two elements
+ * @a: first elemet to swap
+ * @b: second element to swap
+ * @array: array in which this elements are
+ * @size: size of an array
  */
 static void swap(int *a, int *b, int *array, size_t size)
 {
@@ -18,6 +22,12 @@ static void swap(int *a, int *b, int *array, size_t size)
 
 /**
  * lomuto_partitiron - lomuto patition scheme
+ * @array: array to sort
+ * @low: lower than pivot
+ * @high: higher than pivot
+ * @size: size of an array
+ * 
+ * Return: pivot's position
  */
 static int lomuto_partition(int *array, int low, int high, size_t size)
 {
@@ -40,6 +50,10 @@ static int lomuto_partition(int *array, int low, int high, size_t size)
 
 /**
  * quick_sort_recursion - recursive quick sort
+ * @array: array to sort
+ * @low: lower than pivot
+ * @high: higher than pivot
+ * @size: size of an array
  */
 static void quick_sort_recursion(int *array, int low, int high, size_t size)
 {
